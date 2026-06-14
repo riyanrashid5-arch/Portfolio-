@@ -526,11 +526,12 @@
             white-space: nowrap
         }
 
-        /* screenshot previews — fixed height, cover, top-aligned */
+        /* screenshot previews — natural height, contain, top-aligned */
         .ss-img {
             width: 100%;
-            height: 400px;
-            object-fit: cover;
+            height: auto;
+            max-height: 600px;
+            object-fit: contain;
             object-position: top center
         }
 
@@ -616,17 +617,18 @@
             transform: translateY(-3px)
         }
 
-        /* phone-screenshot style: tall crop from top */
+        /* phone-screenshot style: natural height */
         .ev-img {
             width: 100%;
-            height: 260px;
-            object-fit: cover;
+            height: auto;
+            max-height: 500px;
+            object-fit: contain;
             object-position: top center
         }
 
         /* wide screenshots (landscape) */
         .ev-img.landscape {
-            height: 180px;
+            height: auto;
             object-position: center center
         }
 
@@ -709,8 +711,9 @@
 
         .profit-img {
             width: 100%;
-            height: 320px;
-            object-fit: cover;
+            height: auto;
+            max-height: 500px;
+            object-fit: contain;
             object-position: top center
         }
 
@@ -1097,16 +1100,8 @@
                 grid-template-columns: 1fr
             }
 
-            .ev-img {
-                height: 220px
-            }
-
             .profit-grid {
                 grid-template-columns: 1fr
-            }
-
-            .profit-img {
-                height: 180px
             }
 
             .svc-grid {
@@ -1431,7 +1426,7 @@
             <div class="profit-card">
                 <img src="20.jpeg" class="profit-img" alt="Payout records client B — $28,116 gross $6,667 profit">
                 <div class="ev-body" style="padding:16px 20px">
-                    <div class="ev-title">Payout Cycle — Client B</div>
+                    <div class="ev-title">Payout Cycle </div>
                     <div class="ev-val">Investment Growth & Profit Performance</div>
                     <div class="ev-desc">Profitability increased steadily over the reporting period, driven by
                         consistent growth in investment and returns.
